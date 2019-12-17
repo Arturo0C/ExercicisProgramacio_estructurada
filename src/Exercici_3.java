@@ -5,13 +5,11 @@ public class Exercici_3 {
         Scanner sc = new Scanner(System.in);
         System.out.println("Dime una palabra en minuscula: ");
         String palabra = sc.nextLine();
-        String result = "";
+        StringBuilder result = new StringBuilder();
 
         for (int i = 0; i < palabra.length(); i++) {
-           if (i > 'a' && i < 'z') {
-               continue;
-           } else {
-               result += (char) (palabra.charAt(i) + 'A' - 'a');
+           if (i >= 'a' && i <= 'z') {
+               result.append((char) (palabra.charAt(i) + 'A' - 'a'));
            }
         }
         System.out.println(palabra + " passat a majúscules és: " + result);
